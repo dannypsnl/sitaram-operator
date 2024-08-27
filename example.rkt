@@ -5,13 +5,13 @@
 
 (define (f)
   (println 1)
-  (define r (fcontrol 'hi #:tag example-tag))
+  (define r (fcontrol 2 #:tag example-tag))
   (println r)
-  (println 3))
+  (println 5))
 
 (% (f)
    (lambda (v resume)
      (println v)
-     (println 2)
-     (resume 'hi))
+     (println 3)
+     (resume 4))
    #:tag example-tag)
